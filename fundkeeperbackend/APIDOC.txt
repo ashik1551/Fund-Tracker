@@ -1,0 +1,161 @@
+schema:User
+
+attributes:username,password,email
+
+1) API for creating a new user account
+
+    url:http://127.0.0.1:8000/api/register/
+
+    method:post
+
+    body:{username,password,email}
+
+    Authorization:nill
+
+    status:completed
+
+2) API for fetching token
+
+    url:http://127.0.0.1:8000/api/token/
+    
+    method:post
+
+    body:{username,password}
+
+    Authorization:nill
+
+    status:completed
+
+-------------------------------------------end auth------------------------------------------
+
+schema:Expense
+
+attributes:title,amount,category,priority,owner
+
+3) API for fetching expense data
+
+    url:http://127.0.0.1:8000/api/expenses/
+    
+    method:get
+
+    body:nill
+
+    Authorization:token
+
+    status:completed
+
+4) API for fetching a particular expense data
+
+    url:http://127.0.0.1:8000/api/expenses/{id}/
+    
+    method:get
+
+    body:nill
+
+    Authorization:token
+
+    status:completed
+
+5) API for add an expense
+
+    url:http://127.0.0.1:8000/api/expenses/
+    
+    method:post
+
+    body:{title,amount,category,priority}
+
+    Authorization:token
+
+    status:completed
+
+6) API for update an expense
+
+    url:http://127.0.0.1:8000/api/expenses/{id}/
+    
+    method:put
+
+    body:{title,amount,category,priority}
+
+    Authorization:token
+
+    status:completed
+
+7) API for delete an expense
+
+    url:http://127.0.0.1:8000/api/expenses/{id}/
+    
+    method:delete
+
+    body:nil
+
+    Authorization:token
+
+    status:completed
+
+-------------------------------------------end Expense------------------------------------------
+
+schema:Income
+
+attributes:title,amount,category,owner
+
+8) API for fetching income data
+
+    url:http://127.0.0.1:8000/api/incomes/
+    
+    method:get
+
+    body:nill
+
+    Authorization:token
+
+    status:completed
+
+9) API for fetching a particular income data
+
+    url:http://127.0.0.1:8000/api/incomes/{id}/
+    
+    method:get
+
+    body:nill
+
+    Authorization:token
+
+    status:completed
+
+10) API for add an income
+
+    url:http://127.0.0.1:8000/api/incomes/
+    
+    method:post
+
+    body:{title,amount,category}
+
+    Authorization:token
+
+    status:completed
+
+11) API for update an income
+
+    url:http://127.0.0.1:8000/api/incomes/{id}/
+    
+    method:put
+
+    body:{title,amount,category}
+
+    Authorization:token
+
+    status:completed
+
+12) API for delete an income
+
+    url:http://127.0.0.1:8000/api/incomes/{id}/
+    
+    method:delete
+
+    body:nil
+
+    Authorization:token
+
+    status:completed
+
+-------------------------------------------end Income------------------------------------------
